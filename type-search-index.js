@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"by.bsuir.Stephanovich.task9","l":"Ball"},{"p":"by.bsuir.Stephanovich.task9","l":"Basket"},{"p":"by.bsuir.Stephanovich","l":"Main"},{"p":"by.bsuir.Stephanovich.task1","l":"Task1"},{"p":"by.bsuir.Stephanovich.task2","l":"Task2"},{"p":"by.bsuir.Stephanovich.task3","l":"Task3"},{"p":"by.bsuir.Stephanovich.task9","l":"Task9"}]

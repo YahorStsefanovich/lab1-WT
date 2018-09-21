@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"by.bsuir.Stephanovich"},{"l":"by.bsuir.Stephanovich.task1"},{"l":"by.bsuir.Stephanovich.task2"},{"l":"by.bsuir.Stephanovich.task3"},{"l":"by.bsuir.Stephanovich.task9"}]
