@@ -1,9 +1,9 @@
-package by.bsuir.Stephanovich.Task4;
+package by.bsuir.Stephanovich.task4;
 
 import java.util.ArrayList;
 
-public class Task4 {
-    public Task4(int N){
+public class SimpleNumbers {
+    public SimpleNumbers(int N){
         this.size = N;
         arr = new int[size];
         for (int i = 0; i < size; i++){
@@ -39,6 +39,6 @@ public class Task4 {
         return resultArr;
     }
 
-    public int [] arr;
+    private int [] arr;
     private int size;
 }

@@ -1,15 +1,15 @@
-package by.bsuir.Stephanovich.task1;
+package by.bsuir.Stephanovich.tests;
 
+import by.bsuir.Stephanovich.task1.SolveExample;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class Task1Test {
+public class SolveExampleTest {
 
     @Test
     public void solveEquation() {
         double excepted = 0.5;
-        double actual = Task1.solveEquation(0,0);
-        double delta = 0.000001;
+        double actual = SolveExample.solveEquation(0,0);
         Assertions.assertEquals(excepted, actual);
     }
 }

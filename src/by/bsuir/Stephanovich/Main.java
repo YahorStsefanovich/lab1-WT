@@ -1,23 +1,27 @@
 package by.bsuir.Stephanovich;
 
-import by.bsuir.Stephanovich.Task4.Task4;
-import by.bsuir.Stephanovich.task1.Task1;
-import by.bsuir.Stephanovich.task2.Task2;
-import by.bsuir.Stephanovich.task3.Task3;
+import by.bsuir.Stephanovich.task4.SimpleNumbers;
+import by.bsuir.Stephanovich.task1.SolveExample;
+import by.bsuir.Stephanovich.task2.BelongingToArea;
+import by.bsuir.Stephanovich.task3.GeneratorOfValues;
+import by.bsuir.Stephanovich.task6.Matrix;
 import by.bsuir.Stephanovich.task9.Task9;
 
 public class Main {
 
     public static void main(String[] args) {
         //task1
-        System.out.println("Result: " + Task1.solveEquation(1,2));
+        System.out.println("Result: " + SolveExample.solveEquation(1,2));
         //task2
-        System.out.println("Is point int the area? " + Task2.isPointInTheArea(1, 2));
+        System.out.println("Is point int the area? " + BelongingToArea.isPointInTheArea(1, 2));
         //task3
-        Task3.findValueFromAToBWithStepH(1.0,2.0, 0.5);
+        GeneratorOfValues.findValueFromAToBWithStepH(1.0,2.0, 0.5);
         //task4
-        Task4 task4 = new Task4(10);
+        SimpleNumbers task4 = new SimpleNumbers(10);
         System.out.println(task4.findIndexesOfSimpleNumbers().toString());
+        //task6
+        Matrix matrix = new Matrix(1,2,3,4);
+        System.out.println(matrix.toString());
         //task9
         Task9 task9 = new Task9();
         task9.fillBasket();
