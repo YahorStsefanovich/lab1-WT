@@ -34,7 +34,7 @@ public class Matrix {
     private int [][] twoDimensionalArray;
 
     public static void main(String[] args){
-        Matrix matrix = new Matrix(1,2,3,4);
+        Matrix matrix = new Matrix(1,2,3);
         matrix.getMatrix();
         System.out.println(matrix.toString());
     }

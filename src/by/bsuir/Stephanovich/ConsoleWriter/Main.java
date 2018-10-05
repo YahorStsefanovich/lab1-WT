@@ -1,4 +1,4 @@
-package by.bsuir.Stephanovich;
+package by.bsuir.Stephanovich.ConsoleWriter;
 
 import by.bsuir.Stephanovich.task4.SimpleNumbers;
 import by.bsuir.Stephanovich.task1.SolveExample;
@@ -15,7 +15,7 @@ public class Main {
         //task2
         System.out.println("Is point int the area? " + BelongingToArea.isPointInTheArea(1, 2));
         //task3
-        GeneratorOfValues.findValueFromAToBWithStepH(1.0,2.0, 0.5);
+       // GeneratorOfValues.findValueFromAToBWithStepH(1.0,2.0, 0.5);
         //task4
         SimpleNumbers task4 = new SimpleNumbers(10);
         System.out.println(task4.findIndexesOfSimpleNumbers().toString());

@@ -1,4 +1,4 @@
-package by.bsuir.Stephanovich.task13;
+package by.bsuir.Stephanovich.task13_14;
 
 import by.bsuir.Stephanovich.task12.Book;
 
@@ -28,9 +28,7 @@ public class ProgrammerBook extends Book {
         }
 
         ProgrammerBook book = (ProgrammerBook) obj;
-        return (Objects.equals(book.getAuthor(), getAuthor())) &&
-                (Objects.equals(book.getPrice(), getPrice())) &&
-                (Objects.equals(book.getTitle(), getTitle())) &&
+        return super.equals(obj) &&
                 (Objects.equals(book.language, language)) &&
                 (Objects.equals(book.lvl, lvl));
     }

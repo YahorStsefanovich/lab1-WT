@@ -5,7 +5,7 @@ import java.util.Random;
 
 enum Education {SCHOOL, UNIVERSITY, KINDERGARTEN, PH_DEGREE}
 
-public class Book implements Comparable<Book>{
+public class Book implements Comparable<Book>, Cloneable{
 
     public Book(String title, String author, int price, int isbn){
         this.title = title;
@@ -17,7 +17,7 @@ public class Book implements Comparable<Book>{
 
     @Override
     public int compareTo(Book b) {
-        return this.isbn - b.getIsbn();
+        return Integer.compare(this.isbn - b.getIsbn(), 0);
     }
 
     private String title;
@@ -36,23 +36,18 @@ public class Book implements Comparable<Book>{
     }
 
     @Override
-    protected Book clone(){
-        final Book clone;
+    public Book clone(){
         try {
-            clone = (Book)super.clone();
-        } catch (CloneNotSupportedException ex){
-            throw new RuntimeException("SuperClass messed up", ex);
+            return (Book)super.clone();
         }
-        clone.price = price;
-        clone.author = author;
-        clone.title = title;
-        clone.isbn = isbn;
-        return clone;
+        catch (CloneNotSupportedException ex){
+            throw new InternalError();
+        }
     }
 
     @Override
     public String toString(){
-        return "Title: " + title + ", author: " + author + ", price: " + price;
+        return  "Class: " + getClass().getName()  + ", title: " + title + ", author: " + author + ", price: " + price;
     }
 
     @Override
@@ -70,7 +65,8 @@ public class Book implements Comparable<Book>{
         }
 
         Book book = (Book)obj;
-        return (Objects.equals(book.author,author)) &&
+
+        return (Objects.equals(book.author, author)) &&
                 (Objects.equals(book.price, price)) &&
                 (Objects.equals(book.title, title));
     }

@@ -14,7 +14,7 @@ public class Task9 {
     }
 
     public int findAmountOfBallsColoredBy(String color){
-        return basket.findAmountOfBallsCloredBy(color);
+        return basket.findAmountOfBallsColoredBy(color);
     }
 
     public int findWeightOfBasket(){

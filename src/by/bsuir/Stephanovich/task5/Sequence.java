@@ -15,7 +15,7 @@ public class Sequence {
         for (int i = 1; i < array.length; i++)
             maxLength = (maxLength > maxSequences[i]) ? maxLength : maxSequences[i];
 
-        return maxLength;
+        return array.length - maxLength;
     }
 
     public static void main(String ... args){

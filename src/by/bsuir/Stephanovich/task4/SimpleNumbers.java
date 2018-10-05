@@ -11,29 +11,36 @@ public class SimpleNumbers {
         }
     }
 
+    public SimpleNumbers(int [] arr){
+        this.size = arr.length;
+        this.arr = new int[size];
+        this.arr = arr;
+    }
+
     private boolean isSimple(int index){
         int elem = arr[index];
         int ceil = (int)Math.round(Math.sqrt(elem));
 
         if (elem % 2 == 0){
-            return false;
+            return elem == 2;
         }
 
         for (int delimeter = 3; delimeter <= ceil; delimeter+=2){
             if (elem % delimeter == 0){
-                return false;
+                return elem == delimeter;
             }
         }
 
         return true;
     }
 
+    //return indexes of simple numbers in arr
     public ArrayList<Integer> findIndexesOfSimpleNumbers(){
         ArrayList<Integer> resultArr;
         resultArr = new ArrayList<>();
         for (int i = 0; i < size; i++){
             if (isSimple(i)){
-                resultArr.add(arr[i]);
+                resultArr.add(i);
             }
         }
         return resultArr;
