@@ -9,9 +9,4 @@ public class BookTitleComparator implements Comparator<Book> {
     public int compare(Book b1, Book b2) {
         return b1.getTitle().compareTo(b2.getTitle());
     }
-
-    @Override
-    public Comparator<Book> thenComparing(Comparator<? super Book> other) {
-        return null;
-    }
 }

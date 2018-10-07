@@ -1,4 +1,4 @@
-package by.bsuir.Stephanovich.tests.task1test;
+package tests.tests.task1test;
 
 import by.bsuir.Stephanovich.task1.SolveExample;
 import org.junit.jupiter.api.Assertions;

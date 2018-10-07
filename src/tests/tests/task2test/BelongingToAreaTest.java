@@ -1,4 +1,4 @@
-package by.bsuir.Stephanovich.tests.task2test;
+package tests.tests.task2test;
 
 import by.bsuir.Stephanovich.task2.BelongingToArea;
 import org.junit.jupiter.api.Assertions;

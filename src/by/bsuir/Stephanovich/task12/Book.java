@@ -1,5 +1,8 @@
 package by.bsuir.Stephanovich.task12;
 
+import by.bsuir.Stephanovich.task15.BookAuthorComparator;
+
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Random;
 
@@ -47,12 +50,21 @@ public class Book implements Comparable<Book>, Cloneable{
 
     @Override
     public String toString(){
-        return  "Class: " + getClass().getName()  + ", title: " + title + ", author: " + author + ", price: " + price;
+        return  "Class: " + getClass().getName()  +
+                ",\n title: " + title +
+                ",\n author: " + author +
+                ",\n price: " + price;
     }
 
     @Override
     public int hashCode() {
-        return toString().hashCode() * education;
+        final int prime = 31;
+        int result = 1;
+        result = (prime * result) + price;
+        result = (prime * result) + author.hashCode();
+        result = (prime * result) + title.hashCode();
+        result = (prime * result) + education;
+        return result;
     }
 
     @Override
@@ -104,9 +116,18 @@ public class Book implements Comparable<Book>, Cloneable{
     }
 
     public static void main(String ... args){
-        Book book1 = new Book("Idiot", "Mayakovskiy", 10, 4);
-        Book book2 = new Book("Idiot", "Mayakovskiy", 10, 5);
-        System.out.println(book1.toString());
+        ArrayList<Book> collection = new ArrayList<>();
+        Book b1 = new Book("Вечера на хуторе близ Диканьки", "Н. Гоголь", 20, 12);
+        Book b2 = new Book("Бородино", "М. Ю. Лермонтов", 25, 11);
+        Book b3 = new Book("Жураулины крык", "В. Быков", 30, 10);
+
+        BookAuthorComparator bookAuthorComparator = new BookAuthorComparator();
+
+        collection.add(b1);
+        collection.add(b2);
+        collection.add(b3);
+        collection.sort(bookAuthorComparator);
+        System.out.println(collection);
     }
 
     public int getIsbn() {
@@ -116,4 +137,6 @@ public class Book implements Comparable<Book>, Cloneable{
     public void setIsbn(int isbn) {
         this.isbn = isbn;
     }
+
+
 }

@@ -1,4 +1,4 @@
-package by.bsuir.Stephanovich.tests.task3test;
+package tests.tests.task3test;
 
 import by.bsuir.Stephanovich.task3.GeneratorOfValues;
 import org.junit.Test;

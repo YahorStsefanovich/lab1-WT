@@ -1,11 +1,10 @@
-package by.bsuir.Stephanovich.tests.task4test;
+package tests.tests.task4test;
 
 import by.bsuir.Stephanovich.task4.SimpleNumbers;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 
 import static org.junit.Assert.*;
 

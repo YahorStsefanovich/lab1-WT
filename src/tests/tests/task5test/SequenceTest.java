@@ -1,10 +1,8 @@
-package by.bsuir.Stephanovich.tests.task5test;
+package tests.tests.task5test;
 
 import by.bsuir.Stephanovich.task5.Sequence;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class SequenceTest {
 

@@ -35,12 +35,16 @@ public class ProgrammerBook extends Book {
 
     @Override
     public String toString() {
-        return super.toString() + ", language: " + language + ", level: " + lvl;
+        return super.toString() + ",\n language: " + language + ",\n level: " + lvl;
     }
 
     @Override
     public int hashCode() {
-        return toString().hashCode();
+        final int prime = 31;
+        int result = super.hashCode();
+        result = (prime * result) + language.hashCode();
+        result = (prime * result) + lvl;
+        return result;
     }
 
     private int lvl;

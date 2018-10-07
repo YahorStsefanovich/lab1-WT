@@ -1,12 +1,10 @@
-package by.bsuir.Stephanovich.tests.task9test;
+package tests.tests.task9test;
 
 import by.bsuir.Stephanovich.task9.Ball;
 import by.bsuir.Stephanovich.task9.Basket;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-
-import static org.junit.Assert.*;
 
 public class BasketTest {
 

@@ -1,4 +1,4 @@
-package by.bsuir.Stephanovich.tests.task6test;
+package tests.tests.task6test;
 
 import by.bsuir.Stephanovich.task6.Matrix;
 import org.junit.Assert;
