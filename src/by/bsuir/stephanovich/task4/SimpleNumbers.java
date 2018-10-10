@@ -21,6 +21,9 @@ public class SimpleNumbers {
         int elem = arr[index];
         int ceil = (int)Math.round(Math.sqrt(elem));
 
+        if (elem < 2)
+            return false;
+
         if (elem % 2 == 0){
             return elem == 2;
         }

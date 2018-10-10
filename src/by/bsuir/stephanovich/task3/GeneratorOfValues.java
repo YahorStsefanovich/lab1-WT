@@ -12,9 +12,4 @@ public class GeneratorOfValues {
         }
         return map;
     }
-
-    public static void main(String ... args){
-        Map<Double, Double> map = GeneratorOfValues.findValueFromAToBWithStepH(0, 1,0.1);
-        System.out.println(map.get(0.5));
-    }
 }

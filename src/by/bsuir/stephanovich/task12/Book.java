@@ -13,7 +13,7 @@ public class Book implements Comparable<Book>, Cloneable{
         this.author = author;
         this.price = price;
         this.isbn = isbn;
-        education = 1;
+        edition = 1;
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Book implements Comparable<Book>, Cloneable{
     private String title;
     private String author;
     private int price;
-    private static int education;
+    private static int edition;
     private int isbn;
 
     public Book() {
@@ -33,7 +33,7 @@ public class Book implements Comparable<Book>, Cloneable{
         this.price = 0;
         Random r = new Random(100);
         this.isbn = r.nextInt();
-        education = 1;
+        edition = 1;
     }
 
     @Override
@@ -48,10 +48,12 @@ public class Book implements Comparable<Book>, Cloneable{
 
     @Override
     public String toString(){
-        return  "Class: " + getClass().getName()  +
+        return  "\n----------------------\n" +
+                "Class: " + getClass().getName()  +
                 ",\n title: " + title +
                 ",\n author: " + author +
-                ",\n price: " + price;
+                ",\n price: " + price +
+                "\n isbn: " + isbn;
     }
 
     @Override
@@ -61,7 +63,6 @@ public class Book implements Comparable<Book>, Cloneable{
         result = (prime * result) + price;
         result = (prime * result) + author.hashCode();
         result = (prime * result) + title.hashCode();
-        result = (prime * result) + education;
         return result;
     }
 
@@ -81,12 +82,12 @@ public class Book implements Comparable<Book>, Cloneable{
                 (Objects.equals(book.title, title));
     }
 
-    public static int getEducation() {
-        return education;
+    public static int getEdition() {
+        return edition;
     }
 
-    public static void setEducation(int education) {
-        Book.education = education;
+    public static void setEdition(int edition) {
+        Book.edition = edition;
     }
 
     public String getTitle() {
