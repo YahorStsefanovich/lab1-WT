@@ -1,17 +1,27 @@
 package by.bsuir.stephanovich.task1test;
 
 import by.bsuir.stephanovich.task1.SolveExample;
+import org.junit.Before;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class SolveExampleTest {
+class SolveExampleTest {
+
+    private double epsilan = 0.001;
 
     @Test
-    public void solveEquation() {
-        Assertions.assertEquals(0.5, SolveExample.solveEquation(0,0));
+    void solveEquationTestZeroValues() {
+        double actual = SolveExample.solveEquation(0,0);
+        Assertions.assertEquals(0.5, actual);
+    }
 
-        double epsilan = 0.001;
+    @Test
+    void solveEquationTest1() {
         Assertions.assertTrue(Math.abs(10.411 - SolveExample.solveEquation(10.3,100.3)) < epsilan);
-        Assertions.assertTrue(Math.abs(1.562 - SolveExample.solveEquation(1,3)) < epsilan);
+    }
+
+    @Test
+    void solveEquationTest2() {
+        Assertions.assertTrue(Math.abs(10.411 - SolveExample.solveEquation(10.3,100.3)) < epsilan);
     }
 }

@@ -37,7 +37,7 @@ public class Book implements Comparable<Book>, Cloneable{
     }
 
     @Override
-    public Book clone(){
+    public Book clone() throws InternalError{
         try {
             return (Book)super.clone();
         }
